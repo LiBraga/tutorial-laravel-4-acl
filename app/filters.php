@@ -12,7 +12,7 @@ Route::filter("auth", function()
         {
             foreach ($group->resources as $resource)
             {
-                if ($resource->pattern == Route::getCurrentRoute()->getPath())
+                if ($resource->name == Route::getCurrentRoute()->getPath())
                 {
                     return;
                 }
